@@ -51,17 +51,41 @@ export const ContentPage: FC = () => {
 
         <div className="w-screen h-screen bg-[#0d0d0d] flex items-center justify-center overflow-hidden">
             <div className="flex flex-col items-center justify-center ">
-                <div className={`bg-green-500 ${width} ${height}`}>
+                <div className={`${width} ${height}`}>
                     <LogoInzeros
                         width={"100%"}
                         height={"100%"}
                     />
                 </div>
-                <div className={`bg-red-400 ${width} py-2 `}>
+                <div className={`${width} py-2`}>
 
-                    <div className="w-full  br-red-400">
-                        <p>Days</p>
+                    <div className="flex items-center justify-between font-['Inversionz_Unboxed',monospace]">
+                        <div className="">
+                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                                {formatNumber(timeLeft.days)}
+                            </span>
+                        </div>
+                        <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white opacity-80">:</span>
+                        <div className="">
+                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                                {formatNumber(timeLeft.hours)}
+                            </span>
+                        </div>
+                        <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white opacity-80">:</span>
+                        <div className="">
+                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                                {formatNumber(timeLeft.minutes)}
+                            </span>
+                        </div>
+                        <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white opacity-80">:</span>
+                        <div className="">
+                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                                {formatNumber(timeLeft.seconds)}
+                            </span>
+                        </div>
                     </div>
+
+
 
                 </div>
             </div>
