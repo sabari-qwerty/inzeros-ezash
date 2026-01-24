@@ -11,36 +11,30 @@ interface TimeLeft {
 }
 
 export const ContentPage: FC = () => {
-    const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-        days: 30,
-        hours: 3,
-        minutes: 5,
-        seconds: 54
-    })
+    // Target date: February 22nd, 2026 at 00:00:00
+    const targetDate = new Date('2026-02-22T00:00:00').getTime()
+
+    const calculateTimeLeft = (): TimeLeft => {
+        const now = new Date().getTime()
+        const difference = targetDate - now
+
+        if (difference <= 0) {
+            return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+        }
+
+        return {
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+            seconds: Math.floor((difference % (1000 * 60)) / 1000)
+        }
+    }
+
+    const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft())
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setTimeLeft(prev => {
-                let { days, hours, minutes, seconds } = prev
-
-                if (seconds > 0) {
-                    seconds--
-                } else if (minutes > 0) {
-                    minutes--
-                    seconds = 59
-                } else if (hours > 0) {
-                    hours--
-                    minutes = 59
-                    seconds = 59
-                } else if (days > 0) {
-                    days--
-                    hours = 23
-                    minutes = 59
-                    seconds = 59
-                }
-
-                return { days, hours, minutes, seconds }
-            })
+            setTimeLeft(calculateTimeLeft())
         }, 1000)
 
         return () => clearInterval(timer)
