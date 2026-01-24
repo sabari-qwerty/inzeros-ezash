@@ -3,7 +3,7 @@
 import { FC, useState } from "react"
 import Image from "next/image"
 import { Facebook, Twitter, Youtube, MessageCircle, Linkedin, Menu, X } from "lucide-react"
-import LogoInzeros from "./logo-inzeros"
+import { LogoInzeros } from "./logo-inzeros"
 
 export const TopNavBar: FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)

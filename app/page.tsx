@@ -1,13 +1,13 @@
-import { TopNavBar } from '@/components/common/top-nav-bar';
-import { Slider } from '../components/home-page/slide'
+import { ContentPage } from "@/components/countent-page";
+
 
 
 
 export default function Home() {
   return (
     <>
-      <Slider />
-      <TopNavBar />
+      <ContentPage />
+      {/* <Slider /> */}
     </>
   );
 }
