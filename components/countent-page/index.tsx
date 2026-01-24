@@ -45,7 +45,7 @@ export const ContentPage: FC = () => {
     }
 
     const width = "lg:w-[800px] md:w-[690px] xs:w-[220px]"
-    const height = "lg:h-[250px] md:h-[250px] xs:h-[66px]"
+    const height = "lg:h-[240px] md:h-[200px] xs:h-[66px]"
 
     return (
 
@@ -65,21 +65,21 @@ export const ContentPage: FC = () => {
                                 {formatNumber(timeLeft.days)}
                             </span>
                         </div>
-                        <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white opacity-80">:</span>
+                        <span className="lg:text-[100px] md:text-[85px] text-[45px] font-normal text-white opacity-80">:</span>
                         <div className="">
-                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                            <span className="lg:text-[100px] md:text-[85px] text-[45px] font-normal text-white">
                                 {formatNumber(timeLeft.hours)}
                             </span>
                         </div>
-                        <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white opacity-80">:</span>
+                        <span className="lg:text-[100px] md:text-[85px] text-[45px] font-normal text-white opacity-80">:</span>
                         <div className="">
-                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                            <span className="lg:text-[100px] md:text-[85px] text-[45px] font-normal text-white">
                                 {formatNumber(timeLeft.minutes)}
                             </span>
                         </div>
-                        <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white opacity-80">:</span>
+                        <span className="lg:text-[100px] md:text-[85px] text-[45px] font-normal text-white opacity-80">:</span>
                         <div className="">
-                            <span className="lg:text-[100px] md:text-[85px] text-[40px] font-normal text-white">
+                            <span className="lg:text-[100px] md:text-[85px] text-[45px] font-normal text-white">
                                 {formatNumber(timeLeft.seconds)}
                             </span>
                         </div>
