@@ -49,7 +49,7 @@ export const ContentPage: FC = () => {
 
     return (
 
-        <div className="w-screen h-screen bg-[#0d0d0d] flex items-center justify-center overflow-hidden">
+        <div className="w-screen h-screen bg-black flex items-center justify-center overflow-hidden">
             <div className="flex flex-col items-center justify-center ">
                 <div className={`${width} ${height}`}>
                     <LogoInzeros
@@ -57,7 +57,7 @@ export const ContentPage: FC = () => {
                         height={"100%"}
                     />
                 </div>
-                <div className={`${width} py-2`}>
+                <div className={`${width}`}>
 
                     <div className="flex items-center justify-between font-['Inversionz_Unboxed',monospace]">
                         <div className="">
