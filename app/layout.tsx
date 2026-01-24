@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "inzeros",
-  description: "Games by Inzeros",
+  description: "inzeros",
 };
 
 export default function RootLayout({
