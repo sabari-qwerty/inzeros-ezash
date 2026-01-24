@@ -1,4 +1,5 @@
 import { ContentPage } from "@/components/countent-page";
+import { Slider } from "@/components/home-page/slide";
 
 
 
@@ -6,8 +7,8 @@ import { ContentPage } from "@/components/countent-page";
 export default function Home() {
   return (
     <>
-      <ContentPage />
-      {/* <Slider /> */}
+      {/* <ContentPage /> */}
+      <Slider />
     </>
   );
 }
