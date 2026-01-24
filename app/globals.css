@@ -74,45 +74,15 @@ body {
 }
 
 /* Timer responsive styles */
+
+/* Base styles for timer (desktop default) */
 .timer-number {
-  font-size: 42px;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
-  letter-spacing: 0.5px;
+  font-size: 70px;
+  letter-spacing: 8px;
+  line-height: 1;
 }
 
 .timer-separator {
-  font-size: 42px;
-}
-
-@media (min-width: 640px) {
-  .timer-number {
-    font-size: 60px;
-    letter-spacing: 1px;
-  }
-
-  .timer-separator {
-    font-size: 60px;
-  }
-}
-
-@media (min-width: 768px) {
-  .timer-number {
-    font-size: 60px;
-    letter-spacing: 3px;
-  }
-
-  .timer-separator {
-    font-size: 60px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .timer-number {
-    font-size: 70px;
-    letter-spacing: 6px;
-  }
-
-  .timer-separator {
-    font-size: 70px;
-  }
+  font-size: 70px;
+  line-height: 1;
 }

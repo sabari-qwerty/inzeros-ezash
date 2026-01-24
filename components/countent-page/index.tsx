@@ -12,7 +12,7 @@ interface TimeLeft {
 
 export const ContentPage: FC = () => {
     // Target date: February 22nd, 2026 at 00:00:00
-    const targetDate = new Date('2026-02-22T00:00:00').getTime()
+    const targetDate = new Date('2026-02-21T00:00:00').getTime()
 
     const calculateTimeLeft = (): TimeLeft => {
         const now = new Date().getTime()
@@ -44,43 +44,28 @@ export const ContentPage: FC = () => {
         return num.toString().padStart(2, '0')
     }
 
+    const width = "lg:w-[800px] md:w-[690px] xs:w-[220px]"
+    const height = "lg:h-[250px] md:h-[250px] xs:h-[66px]"
+
     return (
+
         <div className="w-screen h-screen bg-[#0d0d0d] flex items-center justify-center overflow-hidden">
             <div className="flex flex-col items-center justify-center ">
-                <div className="logo-wrapper w-full max-w-[90vw] px-4 mb-8 flex items-center justify-center">
+                <div className={`bg-green-500 ${width} ${height}`}>
                     <LogoInzeros
-                        width={500}
-                        height={150}
-                        className="!w-[200px] !h-[60px] xs:!w-[220px] xs:!h-[66px] sm:!w-[250px] sm:!h-[75px] md:!w-[300px] md:!h-[90px] lg:!w-[400px] lg:!h-[120px]"
+                        width={"100%"}
+                        height={"100%"}
                     />
                 </div>
+                <div className={`bg-red-400 ${width} py-2 `}>
 
-                <div className="flex items-center justify-center gap-1 sm:gap-2 md:gap-3 lg:gap-5 font-['Inversionz_Unboxed',monospace]">
-                    <div className="relative">
-                        <span className="timer-number font-normal text-white">
-                            {formatNumber(timeLeft.days)}
-                        </span>
+                    <div className="w-full  br-red-400">
+                        <p>Days</p>
                     </div>
-                    <span className="timer-separator font-normal text-white opacity-80">:</span>
-                    <div className="relative">
-                        <span className="timer-number font-normal text-white">
-                            {formatNumber(timeLeft.hours)}
-                        </span>
-                    </div>
-                    <span className="timer-separator font-normal text-white opacity-80">:</span>
-                    <div className="relative">
-                        <span className="timer-number font-normal text-white">
-                            {formatNumber(timeLeft.minutes)}
-                        </span>
-                    </div>
-                    <span className="timer-separator font-normal text-white opacity-80">:</span>
-                    <div className="relative">
-                        <span className="timer-number font-normal text-white">
-                            {formatNumber(timeLeft.seconds)}
-                        </span>
-                    </div>
+
                 </div>
             </div>
         </div>
+
     )
 }   

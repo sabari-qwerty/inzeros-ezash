@@ -7,7 +7,7 @@ interface LogoInzerosProps {
     fill?: string;
 }
 
-export const LogoInzeros: React.FC<LogoInzerosProps> = ({ width = 291.533, height = 77.121, className, fill }: LogoInzerosProps) => (
+export const LogoInzeros: React.FC<LogoInzerosProps> = ({ width = "291.533px", height = "77.121px", className, fill }: LogoInzerosProps) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlSpace="preserve"
