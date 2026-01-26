@@ -7,26 +7,34 @@ export const SlideContact: FC = () => {
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // Handle form submission here
-        console.log({ email, message })
+
+        const subject = encodeURIComponent("Contact from Website")
+        const body = encodeURIComponent(`From: ${email}\n\n${message}`)
+
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=inzeros.in@gmail.com&su=${subject}&body=${body}`
+
+        window.open(gmailUrl, "_blank")
+
+        setEmail("")
+        setMessage("")
     }
 
     const socialLinks = [
         {
             icon: <FaInstagram size={24} />,
-            url: "https://instagram.com/yourusername",
+            url: "https://www.instagram.com/inzeros_",
             label: "Instagram"
         },
         {
             icon: <FaYoutube size={24} />,
-            url: "https://youtube.com/@yourchannel",
+            url: "https://www.youtube.com/@Inzeros-studios",
             label: "YouTube"
         },
         {
             icon: <MdEmail size={24} />,
-            url: "mailto:your@email.com",
+            url: "https://mail.google.com/mail/?view=cm&fs=1&to=inzeros.in@gmail.com",
             label: "Email"
         },
         {
@@ -41,6 +49,10 @@ export const SlideContact: FC = () => {
             {/* Main Content Section */}
             <div className="flex-1 flex items-center justify-center px-8 md:px-16 lg:px-24">
                 <div className="w-full max-w-4xl">
+                    {/* Contact Us Heading */}
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-12">
+                        Contact Us
+                    </h2>
                     <div className="flex flex-col lg:flex-row gap-16 items-center justify-center">
                         {/* Left Side - Contact Form */}
                         <div className="flex-1 w-full max-w-md">
@@ -93,8 +105,7 @@ export const SlideContact: FC = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={social.label}
-                                    className="w-12 h-12 border-2 flex items-center justify-center transition-all hover:bg-white hover:text-black group"
-                                    style={{ borderColor: '#ffffff', color: '#ffffff' }}
+                                    className="w-12 h-12 border-2 border-white text-white flex items-center justify-center transition-all hover:bg-white hover:text-black group"
                                 >
                                     <div className="group-hover:scale-110 transition-transform">
                                         {social.icon}
@@ -106,31 +117,6 @@ export const SlideContact: FC = () => {
                 </div>
             </div>
 
-            {/* Bottom Decorative Pattern */}
-            <div className="w-full h-16 relative overflow-hidden">
-                {/* Diagonal stripes pattern */}
-                <div className="absolute inset-0 flex">
-                    {[...Array(20)].map((_, i) => (
-                        <div
-                            key={i}
-                            className="flex-shrink-0"
-                            style={{
-                                width: '40px',
-                                height: '100%',
-                                background: i % 2 === 0
-                                    ? `repeating-linear-gradient(
-                                        45deg,
-                                        #ffffff,
-                                        #ffffff 2px,
-                                        transparent 2px,
-                                        transparent 8px
-                                      )`
-                                    : 'transparent'
-                            }}
-                        ></div>
-                    ))}
-                </div>
-            </div>
         </div>
     )
 }
