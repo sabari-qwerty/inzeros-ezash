@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   images: {
-    remotePatterns: [new URL('https://www.inzeros.in/asstess/**')],
+    remotePatterns: [new URL('https://www.accessts.inzeros.in/asstess/**')],
   },
 };
 
