@@ -39,7 +39,7 @@ export const SlideContact: FC = () => {
         },
         {
             icon: <FaSteam size={24} />,
-            url: "https://steamcommunity.com/id/yourprofile",
+            url: "https://store.steampowered.com/app/4373720/OOTY__Silence_Remains/",
             label: "Steam"
         }
     ]

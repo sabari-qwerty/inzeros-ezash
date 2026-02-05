@@ -39,7 +39,7 @@ export const SlideAbout: FC = () => {
                     style={{ backgroundColor: '#ffffff' }}
                 >
 
-                    <Image src={"https://www.accessts.inzeros.in/asstess/22.png"} alt="" width={500} height={300} loading="lazy" className="w-full h-full object-contain" />
+                    <Image src={"https://accessts.inzeros.in/asstess/22.png"} alt="" width={500} height={300} loading="lazy" className="w-full h-full object-contain" />
                 </div>
 
 

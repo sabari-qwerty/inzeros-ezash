@@ -62,7 +62,7 @@ export const GameImagePreview: FC<GameOverviewProps> = ({ swiperRef }) => {
                     style={{ backgroundColor: '#ffffff' }}
                 >
 
-                    <Image src={"https://www.accessts.inzeros.in/asstess/11.png"} alt="" width={500} height={300} loading="lazy" className="w-full h-full object-contain" />
+                    <Image src={"https://accessts.inzeros.in/asstess/11.png"} alt="" width={500} height={300} loading="lazy" className="w-full h-full object-contain" />
                 </div>
 
                 {/* Navigation Arrow Button - Positioned at right edge */}

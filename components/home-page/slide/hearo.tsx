@@ -4,7 +4,7 @@ import { FC } from "react"
 export const SlideHero: FC = () => {
     return <div className="w-full h-full relative bg-black">
         <video
-            src="https://www.accessts.inzeros.in/asstess/WEBSITE%20VIDEO.mp4"
+            src="https://accessts.inzeros.in/asstess/WEBSITE%20VIDEO.mp4"
             autoPlay
             loop
             muted
