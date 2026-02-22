@@ -1,5 +1,5 @@
 "use client"
-import { FC } from "react"
+import { FC, useState } from "react"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,9 +17,11 @@ import { SlideContact } from "./contact";
 // import required modules
 export const Slider: FC = () => {
 
+    const [activeIndex, setActiveIndex] = useState(0);
+
     const slides = [
         <SlideHero />,
-        <SlideGames />,
+        <SlideGames index={activeIndex} />,
         <SlideAbout />,
         <SlideContact />,
     ]
@@ -31,10 +33,14 @@ export const Slider: FC = () => {
             mousewheel={true}
             pagination={{
                 clickable: true,
+                enabled: false
             }
             }
             modules={[Mousewheel, Pagination]}
             className="mySwiper"
+            onSlideChange={(swiper) => {
+                setActiveIndex(swiper.activeIndex);
+            }}
         >
             {slides.map((slide, index) => (
                 <SwiperSlide key={index}>{slide}</SwiperSlide>
